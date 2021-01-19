@@ -1,10 +1,3 @@
-// renders elements correctly
-// has empty state (extra sad path)
-// inputs render what’s typed
-// displays which ing picked
-// submit calls func w/correct params
-// won’t submit incomplete
-
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import React from "react";
@@ -26,5 +19,8 @@ describe("OrderForm", () => {
 
     expect(nameInputField).toBeInTheDocument();
     expect(submitOrderButton).toBeInTheDocument();
+  });
+  it("should not be able to be submitted without a name", {
+    //wont sub mit without params
   });
 });
