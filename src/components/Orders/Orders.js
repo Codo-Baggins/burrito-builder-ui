@@ -5,7 +5,7 @@ const Orders = (props) => {
   // const [orderElements, setOrderElements] = useState([])
   const orderEls = props.orders.map((order) => {
     return (
-      <div className='order' key={order.name}>
+      <div className='order' data-testid={order.id} key={order.name}>
         <h3>{order.name}</h3>
         <ul className='ingredient-list'>
           {order.ingredients.map((ingredient) => {
